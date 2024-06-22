@@ -1,0 +1,63 @@
+<aside class="sidebar" data-sidebar>
+
+    <div class="sidebar-info">
+
+        <figure class="avatar-box">
+            <img src="{{ personal_data['image'] }}" alt="{{ personal_data['full_name'] }}" width="80">
+        </figure>
+
+        <div class="info-content">
+            <h1 class="name" title="{{ personal_data['full_name'] }}">{{ personal_data['full_name'] }}</h1>
+            <p class="title">{{ personal_data['title'] }}</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+            <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+    </div>
+
+    <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+            <li class="contact-item">
+                <div class="icon-box">
+                    <ion-icon name="mail-outline"></ion-icon>
+                </div>
+                <div class="contact-info">
+                    <p class="contact-title">Email</p>
+                    <a href="mailto:{{ personal_data['email'] }}" class="contact-link">{{ personal_data['email_disguise'] }}</a>
+                </div>
+            </li>
+
+            <li class="contact-item">
+                <div class="icon-box">
+                    <ion-icon name="location-outline"></ion-icon>
+                </div>
+                <div class="contact-info">
+                    <p class="contact-title">Location</p>
+                    <address>{{ personal_data['location'] }}</address>
+                </div>
+            </li>
+
+            {% for social_media in personal_data['social_media'] %}
+            <li class="contact-item">
+                <div class="icon-box">
+                    <ion-icon name="{{ social_media['ion_icon'] }}"></ion-icon>
+                </div>
+                <div class="contact-info">
+                    <p class="contact-title">{{ social_media['name'] }}</p>
+                    <a href="{{ social_media['url'] }}" target="_blank" class="contact-link">{{ social_media['url'] }}</a>
+                </div>
+            </li>
+            {% endfor %}
+
+        </ul>
+
+    </div>
+
+</aside>

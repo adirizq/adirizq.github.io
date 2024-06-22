@@ -1,0 +1,51 @@
+<article class="publication" data-page="publication">
+
+    <header>
+        <h2 class="h2 article-title">Publication</h2>
+    </header>
+
+    <section class="publication-posts">
+
+        <ul class="publication-posts-list">
+
+            {% for publication in publication_page['publications'] %}
+            <li class="publication-post-item">
+                <a href="{{ publication['url'] }}" target="_blank">
+
+                    <div class="publication-content">
+
+                        <div class="publication-meta">
+                            <p class="publication-category">{{ publication['status'] }}</p>
+
+                            <span class="dot"></span>
+
+                            <time>{{ publication['date'] }}</time>
+                        </div>
+
+                        <h3 class="h3 publication-item-title">{{ publication['title'] }}</h3>
+                        
+                        <p class="publication-text-publisher">
+                            {{ publication['publisher'] }}
+                        </p>
+
+                        <h4 class="publication-text">
+                            {{ publication['abstract'] }}
+                        </h4>
+
+                        <div style="margin-top: 16px">
+                            {% for key in publication['keywords'] %}
+                            <span class="pill">{{ key }}</span>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+
+                </a>
+            </li>
+            {% endfor %}
+
+        </ul>
+
+    </section>
+
+</article>

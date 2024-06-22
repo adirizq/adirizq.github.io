@@ -1,0 +1,84 @@
+<article class="portfolio" data-page="portfolio">
+
+    <header>
+        <h2 class="h2 article-title">Portfolio</h2>
+    </header>
+
+    <section class="projects">
+
+        <ul class="filter-list">
+
+            <li class="filter-item">
+                <button class="active" data-filter-btn>All</button>
+            </li>
+
+            {% for category in portfolio_page['categories'] %}
+            <li class="filter-item">
+                <button data-filter-btn>{{ category }}</button>
+            </li>
+            {% endfor %}
+
+        </ul>
+
+        <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+                <div class="select-value" data-selecct-value>Select category</div>
+
+                <div class="select-icon">
+                    <ion-icon name="chevron-down"></ion-icon>
+                </div>
+
+            </button>
+
+            <ul class="select-list">
+
+                <li class="select-item">
+                    <button data-select-item>All</button>
+                </li>
+
+                {% for category in portfolio_page['categories'] %}
+                <li class="select-item">
+                    <button data-select-item>{{ category }}</button>
+                </li>
+                {% endfor %}
+
+            </ul>
+
+        </div>
+
+        <ul class="project-list">
+
+            {% for portfolio in portfolio_page['portfolios'] %}
+            <li class="project-item  active" data-filter-item data-category="{{ portfolio['category'] | lower }}">
+                <a href="{{ portfolio['url'] }}" target="_blank">
+
+                    <figure class="project-img">
+                        <div class="project-item-icon-box">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </div>
+
+                        <img src="{{ portfolio['image'] }}" alt="{{ portfolio['name'] }}" loading="lazy">
+                    </figure>
+
+                    <h3 class="project-title">{{ portfolio['name'] }}</h3>
+
+                    <p class="project-category">{{ portfolio['category'] }}</p>
+
+                    <p class="project-description">{{ portfolio['description'] }}</p>
+
+                    <div style="margin-top: 16px; margin-left: 10px;">
+                        {% for tech in portfolio['tech_stacks'] %}
+                        <span class="pill">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                </a>
+            </li>
+            {% endfor %}
+
+        </ul>
+
+    </section>
+
+</article>

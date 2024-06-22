@@ -1,0 +1,131 @@
+<article class="resume" data-page="resume">
+
+    <header>
+        <h2 class="h2 article-title">Resume</h2>
+    </header>
+
+
+    {# experience #}
+    <section class="timeline">
+
+        <div class="title-wrapper">
+            <div class="icon-box">
+                <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+        </div>
+
+        <ol class="timeline-list">
+
+            {% for experience in resume_page['experiences'] %}
+            <li class="timeline-item">
+
+                <h4 class="timeline-item-title">{{ experience['position'] }}</h4>
+                <h4 class="timeline-item-company">{{ experience['company'] }}</h4>
+
+                <span>{{ experience['date'] }}</span>
+
+                <ul class="resume-ul">
+                    {% for desc in experience['description'] %}
+                    <li>
+                        <p class="timeline-text">{{ desc | safe }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+            </li>
+            {% endfor %}
+
+        </ol>
+
+    </section>
+
+    {# education #}
+    <section class="timeline">
+
+        <div class="title-wrapper">
+            <div class="icon-box">
+                <ion-icon name="school-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+        </div>
+
+        <ol class="timeline-list">
+
+            {% for education in resume_page['educations'] %}
+            <li class="timeline-item">
+
+                <h4 class="timeline-item-title">{{ education['degree'] }}</h4>
+                <h4 class="timeline-item-company">{{ education['school'] }}</h4>
+
+                <span>{{ education['date'] }}</span>
+
+                <ul class="resume-ul">
+                    {% for desc in education['description'] %}
+                    <li>
+                        <p class="timeline-text">{{ desc | safe }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+            </li>
+            {% endfor %}
+
+        </ol>
+
+    </section>
+
+
+    {# certifications #}
+    <section class="timeline">
+
+        <div class="title-wrapper">
+            <div class="icon-box">
+                <ion-icon name="ribbon-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Notable Certifications</h3>
+        </div>
+
+        <ol class="timeline-list">
+
+            {% for certificate in resume_page['certifications'] %}
+            <li class="timeline-item">
+
+                <a href="{{ certificate['url'] }}" target="_blank">
+                    <h4 class="timeline-item-title">{{ certificate['name'] }}</h4>
+                    <h4 class="timeline-item-company">{{ certificate['issued_by'] }}</h4>
+
+                    <span>
+                        {% if certificate['expiry_date'] %}
+                        Issued {{ certificate['issued_date'] }} - Expires {{ certificate['expiry_date'] }}
+                        {% else %}
+                        Issued {{ certificate['issued_date'] }}
+                        {% endif %}
+                    </span>
+                </a>
+
+            </li>
+            {% endfor %}
+
+        </ol>
+
+    </section>
+
+
+    {# skills #}
+    <section class="skill">
+
+        <h3 class="h3 skills-title">tech Stack</h3>
+
+        <div class="content-card" style="cursor: auto; padding: 15px !important;">
+            {% for tech in resume_page['tech_stacks'] %}
+            <span class="title">{{ tech }}</span>
+            {% endfor %}
+        </div>
+
+    </section>
+
+</article>
