@@ -62,6 +62,18 @@
     "resume_page": {
         "experiences": [
             {
+                "position": "Data Scientis Intern",
+                "company": "Shortlyst AI",
+                "date": "July 2024 - September 2024",
+                "description": [
+                    "Delivered 5+ custom social media data analysis decks, leveraging data visualization to uncover actionable insights. Key areas included conversation volume, hourly trends, sentiment & emotion analysis, topic modeling, and more.",
+                    "Utilized OpenAI API to streamline text analysis.",
+                    "Developed a high-performance topic modeling algorithm (100k+ data in under 10 minutes) using embedding, clustering, and LLM technologies.",
+                    "Implemented efficient news scraping (100+ articles in under 5 minutes) combining third-party APIs and automated page scraping.",
+                    "Deployed Topic Modeling and News Scraping Algorithm using Docker and RabbitMQ."
+                ]
+            },
+            {
                 "position": "Software Engineer Intern",
                 "company": "PT Nawastra Teknologi Nimpuna",
                 "date": "January 2024 - April 2024",
