@@ -56,6 +56,11 @@
                 "name": "PT Nawastra Teknologi Nimpuna",
                 "image": "./assets/images/companies/pt-nawastra.png",
                 "url": "https://nawastratechnology.com/"
+            },
+            {
+                "name": "Shortlyst AI",
+                "image": "./assets/images/companies/shortlyst.png",
+                "url": "https://www.shortlyst.ai/"
             }
         ]
     },
