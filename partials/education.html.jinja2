@@ -1,0 +1,29 @@
+<section class="section" id="education">
+
+    <h2 class="section-title">Education</h2>
+
+    <ol class="entries">
+
+        {% for education in resume_page['educations'] %}
+        <li class="entry">
+
+            <div class="entry-head">
+                <div>
+                    <h3 class="entry-title">{{ education['degree'] }}</h3>
+                    <p class="entry-sub">{{ education['school'] }}</p>
+                </div>
+                <span class="entry-date">{{ education['date'] }}</span>
+            </div>
+
+            <ul class="entry-list">
+                {% for desc in education['description'] %}
+                <li>{{ desc | safe }}</li>
+                {% endfor %}
+            </ul>
+
+        </li>
+        {% endfor %}
+
+    </ol>
+
+</section>

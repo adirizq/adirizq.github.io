@@ -1,0 +1,38 @@
+<section class="section" id="publications">
+
+    <h2 class="section-title">Publications</h2>
+
+    <ol class="pubs">
+
+        {% for publication in publication_page['publications'] %}
+        <li class="pub">
+
+            <h3 class="pub-title">
+                <a href="{{ publication['url'] }}" target="_blank" rel="noopener">{{ publication['title'] }}</a>
+            </h3>
+
+            {% if publication['authors'] %}
+            <p class="pub-authors">
+                {% for author in publication['authors'] %}{% if author == personal_data['full_name'] %}<strong>{{ author }}</strong>{% else %}{{ author }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}
+            </p>
+            {% endif %}
+
+            <p class="pub-meta">
+                <span class="pub-venue">{{ publication['publisher'] }}</span>, {{ publication['date'] }}
+                &middot; {{ publication['status'] }}
+            </p>
+
+            <details class="pub-abstract">
+                <summary>Abstract</summary>
+                <p>{{ publication['abstract'] }}</p>
+                {% if publication['keywords'] %}
+                <p class="muted">Keywords: {{ publication['keywords'] | join(', ') }}</p>
+                {% endif %}
+            </details>
+
+        </li>
+        {% endfor %}
+
+    </ol>
+
+</section>

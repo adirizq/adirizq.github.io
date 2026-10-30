@@ -1,0 +1,36 @@
+<section class="section" id="certifications">
+
+    <h2 class="section-title">Certifications</h2>
+
+    <ul class="certs">
+
+        {% for certificate in resume_page['certifications'] %}
+        <li class="cert">
+            <span>
+                {% if certificate['url'] and certificate['url'] != '#' %}
+                <a href="{{ certificate['url'] }}" target="_blank" rel="noopener">{{ certificate['name'] }}</a>
+                {% else %}
+                {{ certificate['name'] }}
+                {% endif %}
+                <span class="muted">&mdash; {{ certificate['issued_by'] }}</span>
+            </span>
+            <span class="entry-date">{{ certificate['issued_date'] }}</span>
+        </li>
+        {% endfor %}
+
+    </ul>
+
+</section>
+
+<section class="section" id="skills">
+
+    <h2 class="section-title">Skills</h2>
+
+    <dl class="skills">
+        <dt>Tech</dt>
+        <dd>{{ resume_page['tech_stacks'] | join(' · ') }}</dd>
+        <dt>Languages</dt>
+        <dd>{{ resume_page['languages'] | join(' · ') }}</dd>
+    </dl>
+
+</section>

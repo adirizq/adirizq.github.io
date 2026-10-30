@@ -1,5 +1,6 @@
 import jinja2
 import json
+from datetime import date
 
 def render_index():
     data_json = json.loads(open('data.json').read())
@@ -8,11 +9,12 @@ def render_index():
     template = env.get_template('index.html.jinja2')
 
     rendered_html = template.render(
-        personal_data = data_json['persoal_data'],
+        personal_data = data_json['personal_data'],
         about_me_page = data_json['about_me_page'],
         resume_page = data_json['resume_page'],
         publication_page = data_json['publication_page'],
         portfolio_page = data_json['portfolio_page'],
+        year = date.today().year,
     )
 
     with open('index.html', 'w') as f:

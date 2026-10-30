@@ -1,7 +1,7 @@
 {
-    "persoal_data": {
+    "personal_data": {
         "full_name": "Rizky Adi",
-        "title": "AI Engineer",
+        "title": "NLP Ph.D. Student",
         "image": "./assets/images/profile.jpg",
         "email_disguise": "rizkyzadadi[at]gmail[dot]com",
         "email": "rizkyzadadi@gmail.com",
@@ -16,11 +16,17 @@
                 "name": "GitHub",
                 "ion_icon": "logo-github",
                 "url": "https://github.com/adirizq"
+            },
+            {
+                "name": "ORCID",
+                "ion_icon": "finger-print-outline",
+                "url": "https://orcid.org/0009-0003-2673-1741"
             }
-        ]
+        ],
+        "affiliation": "University of Yamanashi"
     },
     "about_me_page": {
-        "description": "I am an aspiring AI engineer and computer science master's student at University of Yamanashi. My passion lies in developing and researching cutting-edge machine learning solutions. I am a certified TensorFlow Developer and have a proven track record of building end-to-end models, leveraging expertise in PyTorch, TensorFlow, Scikit-learn, and other relevant libraries.  My project experience spans image classification and object detection, text classification and generation, and Retrieval Augmented Generation (RAG) systems. I am also proficient in web development, using Flask, FastAPI, and Laravel.",
+        "description": "I spend most of my time figuring out how to teach machines human language. I am currently an NLP Ph.D. student at the University of Yamanashi, supported by the Japanese Government (MEXT) Scholarship. My research focuses on detecting AI/LLM-generated text, especially at the sentence level in human–AI collaborative writing. Before moving into research, I worked across data science and software engineering, building topic modeling pipelines, RAG chatbots, and web applications.",
         "skills": [
             {
                 "name": "AI Engineering",
@@ -67,7 +73,7 @@
     "resume_page": {
         "experiences": [
             {
-                "position": "Data Scientis Intern",
+                "position": "Data Scientist Intern",
                 "company": "Shortlyst AI",
                 "date": "July 2024 - September 2024",
                 "description": [
@@ -98,8 +104,18 @@
                 ]
             },
             {
+                "position": "ASEAN Data Science Explorer Master Trainer",
+                "company": "ASEAN Foundation",
+                "date": "March 2023 - June 2023",
+                "description": [
+                    "Co-authored a comprehensive program manual book in Bahasa Indonesia with the team.",
+                    "Delivered insightful presentations to more than 100 participants, introducing Data Analytics and imparting foundational knowledge on utilizing SAP Analytics Cloud as an effective data analytics platform.",
+                    "Actively engaged in team collaborations."
+                ]
+            },
+            {
                 "position": "Information Technology Part-time Developer",
-                "company": "Sakubi Teknoogi Indonesia",
+                "company": "Sakubi Teknologi Indonesia",
                 "date": "March 2022 - June 2023",
                 "description": [
                     "Successfully led the development and maintenance of six websites and one Android application, catering to a user base exceeding 1500 individuals.",
@@ -109,11 +125,21 @@
         ],
         "educations": [
             {
-                "degree": "Master's in Computer Science",
+                "degree": "Ph.D. in Natural Language Processing",
                 "school": "University of Yamanashi",
-                "date": "October 2024 - 2026 (Expected)",
+                "date": "October 2026 - September 2029 (Expected)",
                 "description": [
-                    "Focusing on Artificial Intelligence and Machine Learning. Especially in Natural Language Processing."
+                    "Funded by the Japanese Government (MEXT) Scholarship.",
+                    "Researching sentence-level AI-generated text detection in human–AI collaborative writing."
+                ]
+            },
+            {
+                "degree": "Master of Engineering in Computer Science",
+                "school": "University of Yamanashi",
+                "date": "October 2024 - September 2026",
+                "description": [
+                    "Funded by the Japanese Government (MEXT) Scholarship.",
+                    "Thesis: Linguistically Grounded Sentence-Level AI-Generated Text Detection in Human-AI Collaborative Writing."
                 ]
             },
             {
@@ -121,8 +147,7 @@
                 "school": "Politeknik Negeri Jakarta",
                 "date": "August 2020 - June 2024",
                 "description": [
-                    "GPA: 3.95/4.0",
-                    "Relevant Coursework: Mathematics, Data Structure, Algorithm, Database, Web Programming, Software Engineering, Machine Learning."
+                    "Rancang Bangun Aplikasi Berbasis Web Pembuatan Pasangan Pertanyaan-Jawaban Otomatis dengan Deep Learning (Design and Development of a Web-Based Application for Automatic Question-Answer Pair Generation using Deep Learning)"
                 ]
             },
             {
@@ -143,7 +168,7 @@
                 "school": "BISA AI Academy",
                 "date": "August 2022 - December 2022",
                 "description": [
-                    "Graduated with an 88.18 average scor",
+                    "Graduated with an 88.18 average score",
                     "Joining as Artificial Intelligence Research Path.",
                     "Learned all about machine learning and AI research.",
                     "Focusing on Tensorflow as a primary deep learning library."
@@ -151,6 +176,13 @@
             }
         ],
         "certifications": [
+            {
+                "name": "JLPT N5",
+                "issued_by": "Japan Educational Exchanges and Services (JEES)",
+                "issued_date": "August 2025",
+                "expiry_date": null,
+                "url": "#"
+            },
             {
                 "name": "TensorFlow Developer Certificate",
                 "issued_by": "Google",
@@ -203,10 +235,75 @@
             "PHP",
             "Laravel",
             "SQL"
+        ],
+        "awards": [
+            {
+                "name": "Japanese Government (MEXT) Scholarship, Master's and Ph.D.",
+                "issued_by": "Ministry of Education, Culture, Sports, Science and Technology, Japan",
+                "date": "October 2024 - Present"
+            },
+            {
+                "name": "Excellent Presentation Award for Master's Thesis",
+                "issued_by": "Department of Engineering, University of Yamanashi",
+                "date": "September 2026"
+            },
+            {
+                "name": "Faculty Award for Academic Excellence",
+                "issued_by": "Department of Engineering, University of Yamanashi",
+                "date": "April 2026"
+            },
+            {
+                "name": "Finalist, KMIPN V (E-Government Field)",
+                "issued_by": "Badan Koordinasi Kemahasiswaan Politeknik Se-Indonesia (BAKORMA)",
+                "date": "August 2023"
+            }
+        ],
+        "languages": [
+            "Indonesian (native)",
+            "English (professional, TOEFL iBT 98)",
+            "Japanese (JLPT N5)"
         ]
     },
     "publication_page": {
         "publications": [
+            {
+                "status": "Main Author",
+                "url": "https://aclanthology.org/2026.emnlp-main.1282/",
+                "date": "October 2026",
+                "title": "Personalization over Generalization: History-Aware Sentence-Level AI Detection in Collaborative Writing",
+                "authors": [
+                    "Rizky Adi",
+                    "Yoshimi Suzuki",
+                    "Fumiyo Fukumoto"
+                ],
+                "publisher": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026)",
+                "abstract": "Sentence-level AI detectors are essential for detecting AI misuse in human-AI collaborative writing. Yet existing approaches still treat all authors identically, ignoring individual writing styles. This is a critical oversight, given that the boundary between human and AI text is inherently author-specific. To address this limitation, we propose PHAS-ID (Personalized History-Aware Sentence-level AI Detector), an approach that introduces personalization to sentence-level detection. By matching target sentences against the author’s history of labeled documents, PHAS-ID tailors its predictions based on prior writing behaviors. Furthermore, current synthetic datasets for this task fail to capture realistic collaborative patterns, which we address by introducing GhostFill, a style-aware synthetic dataset generation pipeline. Our experiments demonstrate that PHAS-ID outperforms the previous state-of-the-art (SOTA) across seen-author, unseen-author, cross-domain, and cross-generator settings. Ablation studies confirm that these improvements stem from genuine author-specific personalization rather than the mere addition of context. Our source code and dataset are available at our GitHub repository.",
+                "keywords": [
+                    "AI-generated text detection",
+                    "Personalization",
+                    "Collaborative writing",
+                    "Synthetic data"
+                ]
+            },
+            {
+                "status": "Main Author",
+                "url": "https://aclanthology.org/2025.ijcnlp-long.188/",
+                "date": "December 2025",
+                "title": "GL-CLiC: Global-Local Coherence and Lexical Complexity for Sentence-Level AI-Generated Text Detection",
+                "authors": [
+                    "Rizky Adi",
+                    "Bassamtiano Renaufalgi Irnawan",
+                    "Yoshimi Suzuki",
+                    "Fumiyo Fukumoto"
+                ],
+                "publisher": "Proceedings of the 14th International Joint Conference on Natural Language Processing and the 4th Conference of the Asia-Pacific Chapter of the ACL (IJCNLP-AACL 2025)",
+                "abstract": "Unlike document-level AI-generated text (AIGT) detection, sentence-level AIGT detection remains underexplored, despite its importance for addressing collaborative writing scenarios where humans modify AIGT suggestions on a sentence-by-sentence basis. Prior sentence-level detectors often neglect the valuable context surrounding the target sentence, which may contain crucial linguistic artifacts that indicate a potential change in authorship. We propose GL-CLiC, a novel technique that leverages both Global and Local signals of Coherence and Lexical Complexity, which we operationalize through discourse analysis and CEFR-based vocabulary sophistication. GL-CLiC models local coherence and lexical complexity by examining a sentence’s relationship with its neighbors or peers, complemented with its document-wide analysis. Our experimental results show that GL-CLiC achieves superior performance and better generalization across domains compared to existing methods.",
+                "keywords": [
+                    "AI-generated text detection",
+                    "Discourse coherence",
+                    "Lexical complexity"
+                ]
+            },
             {
                 "status": "Co-author",
                 "url": "https://ijeecs.iaescore.com/index.php/IJEECS/article/view/35416",

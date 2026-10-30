@@ -4,94 +4,62 @@
 <head>
 
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Rizky Adi - AI Engineer</title>
+  <title>{{ personal_data['full_name'] }} - {{ personal_data['title'] }}</title>
+  <meta name="description" content="{{ personal_data['full_name'] }}, {{ personal_data['title'] }} based in {{ personal_data['location'] }}.">
+
+  <meta property="og:title" content="{{ personal_data['full_name'] }} - {{ personal_data['title'] }}">
+  <meta property="og:description" content="{{ personal_data['full_name'] }}, {{ personal_data['title'] }} based in {{ personal_data['location'] }}.">
+  <meta property="og:image" content="{{ personal_data['image'] }}">
+  <meta property="og:type" content="website">
 
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./assets/css/style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
 
-
 <body>
 
-  <main>
-
-    {# sidebar #}
-    {% include 'partials/sidebar.html.jinja2' %}
-
-
-    {# main content #}
-    <div class="main-content">
-
-
-      {# navbar #}
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Publication</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-      {# about me page #}
-      {% include 'partials/about.html.jinja2' %}
-
-
-      {# resume page #}
-      {% include 'partials/resume.html.jinja2' %}
-
-
-      {# publication page #}
-      {% include 'partials/publication.html.jinja2' %}
-
-
-      {# portfolio page #}
-      {% include 'partials/portfolio.html.jinja2' %}
-      
-
+  {# top bar #}
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="#top" class="topbar-name">{{ personal_data['full_name'] }}</a>
+      <ul class="topbar-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
     </div>
+  </nav>
+
+  <main class="container" id="top">
+
+    {% include 'partials/header.html.jinja2' %}
+
+    {% include 'partials/education.html.jinja2' %}
+
+    {% include 'partials/publications.html.jinja2' %}
+
+    {% include 'partials/awards.html.jinja2' %}
+
+    {% include 'partials/experience.html.jinja2' %}
+
+    {% include 'partials/projects.html.jinja2' %}
+
+    {% include 'partials/certifications.html.jinja2' %}
 
   </main>
 
-
-
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <footer class="container footer">
+    <p>&copy; {{ year }} {{ personal_data['full_name'] }} &middot; <a href="mailto:{{ personal_data['email'] }}">{{ personal_data['email_disguise'] }}</a></p>
+  </footer>
 
 </body>
 

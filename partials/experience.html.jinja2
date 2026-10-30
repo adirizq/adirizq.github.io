@@ -1,0 +1,29 @@
+<section class="section" id="experience">
+
+    <h2 class="section-title">Experience</h2>
+
+    <ol class="entries">
+
+        {% for experience in resume_page['experiences'] %}
+        <li class="entry">
+
+            <div class="entry-head">
+                <div>
+                    <h3 class="entry-title">{{ experience['position'] }}</h3>
+                    <p class="entry-sub">{{ experience['company'] }}</p>
+                </div>
+                <span class="entry-date">{{ experience['date'] }}</span>
+            </div>
+
+            <ul class="entry-list">
+                {% for desc in experience['description'] %}
+                <li>{{ desc | safe }}</li>
+                {% endfor %}
+            </ul>
+
+        </li>
+        {% endfor %}
+
+    </ol>
+
+</section>

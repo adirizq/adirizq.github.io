@@ -1,0 +1,19 @@
+<section class="section" id="awards">
+
+    <h2 class="section-title">Honors &amp; Awards</h2>
+
+    <ul class="certs">
+
+        {% for award in resume_page['awards'] %}
+        <li class="cert">
+            <span>
+                {{ award['name'] }}
+                <span class="muted">&mdash; {{ award['issued_by'] }}</span>
+            </span>
+            <span class="entry-date">{{ award['date'] }}</span>
+        </li>
+        {% endfor %}
+
+    </ul>
+
+</section>
